@@ -1,0 +1,504 @@
+// name pattern printing
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    char name[200][200];
+   string str;
+   int n=1,m=5;
+   getline(cin,str);
+   for(int i=0;i<str.length();i++)
+   {
+       if(str[i]>='a'||str[i]<='z')
+       {
+        if(str[i]=='a'){
+            for(int j=1;j<=5;j++)
+            {
+              for(int k=n;k<=m;k++)
+              {
+                  if(j==1||j==3)
+                  {
+                      name[j][k]='*';
+                  }
+                  else if(k==n||k==m)
+                  {
+                      name[j][k]='*';
+                  }
+              }
+            }
+       }
+          else if(str[i]=='b')
+          {
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(k==n||k==m)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(j==1||j==3||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+          }
+         else  if(str[i]=='c'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='d')
+         {
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n+1||k==m)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='e'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==3||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+
+            }
+         }
+         else  if(str[i]=='f'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==3)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+        else  if(str[i]=='g'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                   if(j==1)
+                   {
+                       name[j][k]='*';
+                   }
+                   else if(j==3&&k==n||j==3&&k==n+2||j==3&&k==n+3||j==3&&k==m)
+                   {
+                     name[j][k]='*';
+                   }
+                    else if(j==4&&k==n||j==4&&k==n+2||j==4&&k==m)
+                   {
+                     name[j][k]='*';
+                   }
+                    else if(j==5&&k==n||j==5&&k==n+1||j==5&&k==n+2||j==5&&k==m)
+                   {
+                     name[j][k]='*';
+                   }
+                }
+            }
+        }
+         else  if(str[i]=='h'){
+             for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==3)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n||k==m)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='i'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n+2)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='j'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(j==5&&k==n||j==5&&k==n+1||j==5&&k==n+2)
+                    {
+                      name[j][k]='*';
+                    }
+                    else if(k==n+2)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='k'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1&&k==n+2||j==5&&k==n+2)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(j==2&&k==n+1||j==4&&k==n+1)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='l'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='m'){
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==2&&k==n+1||j==2&&k==m-1||j==3&&k==n+2)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n||k==m)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='n'){
+             int x=n;
+            for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(k==x)
+                    {
+                        name[j][k]='*';
+                    }
+                     if(k==n||k==m)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+                x++;
+            }
+         }
+         else  if(str[i]=='o'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                     if(k==n||k==m)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+            }
+         }
+         else  if(str[i]=='p'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==3)
+                    {
+                        name[j][k]='*';
+                    }
+                     else if(j==2&&k==n||j==2&&k==m)
+                    {
+                      name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='q'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==2&&k==n+1)
+                    {
+                        name[j][k]='*';
+                    }
+                     else if(j==1||j==5)
+                    {
+                      name[j][k]='*';
+                    }
+                    else if(k==n||k==m)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='r'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==3)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n)
+                    {
+                        name[j][k]='*';
+                    }
+                     else if(j==2&&k==n||j==2&&k==m)
+                    {
+                      name[j][k]='*';
+                    }
+                    else if(j==4&&k==n+1||j==5&&k==n+2)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='s'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1||j==3||j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                     else if(j==2&&k==n||j==4&&k==m)
+                    {
+                      name[j][k]='*';
+                    }
+
+                }
+            }
+            }
+            else  if(str[i]=='t'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n+2)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='u'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==5)
+                    {
+                        name[j][k]='*';
+                    }
+                    else if(k==n||k==m)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='v'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(j==1&&k==n||j==1&&k==m)
+                    {
+                        name[j][k]='*';
+                    }
+                     else if(j==2&&k==n+1||j==2&&k==m-1)
+                    {
+                      name[j][k]='*';
+                    }
+                    else if(j==3&&k==n+2)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='w'){
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(k==n||k==m)
+                    {
+                        name[j][k]='*';
+                    }
+                    if(j==3&&k==n+2)
+                    {
+                      name[j][k]='*';
+                    }
+                    else if(j==4&&k==n+1||j==4&&k==m-1)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+            }
+            }
+            else  if(str[i]=='x'){
+                    int a=n,b=m;
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(k==a||k==b)
+                    {
+                        name[j][k]='*';
+                    }
+                }
+                a++;
+                b--;
+            }
+            }
+            else  if(str[i]=='y'){
+                    int a=m;
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(k==a)
+                    {
+                        name[j][k]='*';
+                    }
+                    if(j==1&&k==n||j==2&&k==n+1||j==3&&k==n+2)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+                a--;
+            }
+            }
+            else  if(str[i]=='z'){
+                    int z=m;
+           for(int j=1;j<=5;j++)
+            {
+                for(int k=n;k<=m;k++)
+                {
+                    if(k==z)
+                    {
+                        name[j][k]='*';
+                    }
+                    if(j==1||j==5)
+                    {
+                      name[j][k]='*';
+                    }
+                }
+                z--;
+            }
+            }
+       }
+       n=m+1;
+       m=m+5;
+       }
+   for(int i=1;i<=5;i++)
+   {
+       for(int j=1;j<=m-5;j++)
+       {
+           if(j%5==1)
+           {
+             cout<<" ";
+           }
+           if(name[i][j]=='*')
+           {
+               cout<<name[i][j];
+           }
+           else{
+            cout<<" ";
+           }
+       }
+       cout<<endl;
+   }
+    return 0;
+}
